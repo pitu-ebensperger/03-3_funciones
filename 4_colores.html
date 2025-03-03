@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Modak&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+        height: 100vh;
+        width: 100vw;
+        align-content: center;
+        justify-items: center;
+        font-family: 'Roboto Mono', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; flex-direction: row; margin: 20px;">
+    <div id="ele1" style="height: 200px; width: 200px; background-color: blue; border: 1px solid white;"> </div>
+    <div id="ele2" style="height: 200px; width: 200px; background-color: red; border: 1px solid white;"> </div>
+    <div id="ele3" style="height: 200px; width: 200px; background-color: green; border: 1px solid white;"> </div>
+    <div id="ele4" style="height: 200px; width: 200px; background-color: yellow; border: 1px solid white;"> </div>
+    </div>
+    <div style="display: flex; flex-direction: row; margin: 20px;">
+    <div id="key" style="height: 200px; width: 200px; background-color: white; border: 2px solid black;"> </div>
+    </div>
+    
+    <script>
+        const ele1 = document.getElementById("ele1");
+        const ele2 = document.getElementById("ele2");
+        const ele3 = document.getElementById("ele3");
+        const ele4 = document.getElementById("ele4");
+        const eleKey = document.getElementById("key");
+
+        const pintar = (element,color) => {
+            element.style.backgroundColor = color;
+        }
+
+        ele1.addEventListener("click", () => {
+            pintar(ele1, "black");
+        });
+
+        ele2.addEventListener("click", () => {
+            pintar(ele2, "black");
+        });
+
+        ele3.addEventListener("click", () => {
+            pintar(ele3, "black");
+        });
+
+        ele4.addEventListener("click", () => {
+            pintar(ele4, "black");
+        });
+
+
+        document.addEventListener('keydown', function (event) {
+        if (event.key === 'a') {
+            pintar(eleKey, "pink");
+        } 
+        else if (event.key === 's') {
+            pintar(eleKey, "orange");
+        }
+        else if (event.key === 'd') {
+            pintar(eleKey, "lightblue");
+        }
+        })
+    </script>
+</body>
+</html>
